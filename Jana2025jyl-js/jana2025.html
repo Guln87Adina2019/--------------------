@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма мысалы</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .error {
+            color: red;
+        }
+        .success {
+            color: green;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Форма</h1>
+    
+    <label for="groupSelect">Топ таңдау:</label>
+    <select id="groupSelect">
+        <option value="">Топты таңдаңыз</option>
+        <option value="24/2">24/2</option>
+        <option value="24/4">24/4</option>
+        <option value="24/6">24/6</option>
+    </select>
+
+    <p id="selectedGroup"></p>
+
+    <label for="comment">Пікіріңіз:</label>
+    <textarea id="comment" rows="4" cols="50"></textarea>
+    <p id="commentFeedback" class="error"></p>
+
+    <label for="rating">Бағалау:</label>
+    <input type="range" id="rating" min="0" max="100" value="50">
+    <p>Ағымдағы бағалау: <span id="ratingValue">50</span></p>
+
+    <button id="submitButton">Жіберу</button>
+    <p id="formFeedback"></p>
+
+    <!-- Сыртқы JavaScript файлын қосу -->
+    <script src="jana.js"></script>
+</body>
+</html>
