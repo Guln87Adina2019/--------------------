@@ -1,0 +1,90 @@
+/* Жалпы стилдер */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #282c34;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Контейнер */
+.container {
+    position: relative;
+}
+
+/* Тақырып */
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+/* Параграф */
+p {
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+/* Қар жауып тұратын анимация */
+.snowflakes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Әр қарды сәндеу */
+.snowflake {
+    font-size: 2em;
+    color: white;
+    position: absolute;
+    animation: fall 10s linear infinite;
+}
+
+/* Қардың құлауының анимациясы */
+@keyframes fall {
+    0% {
+        transform: translateY(-100px) translateX(0);
+    }
+    100% {
+        transform: translateY(100vh) translateX(calc(100vw * (random() - 0.5)));
+    }
+}
+
+/* Анимацияның әр қарға әртүрлі жылдамдық және орын таңдау */
+.snowflake:nth-child(1) {
+    animation-duration: 12s;
+    animation-delay: 0s;
+}
+
+.snowflake:nth-child(2) {
+    animation-duration: 14s;
+    animation-delay: 2s;
+}
+
+.snowflake:nth-child(3) {
+    animation-duration: 16s;
+    animation-delay: 4s;
+}
+
+.snowflake:nth-child(4) {
+    animation-duration: 10s;
+    animation-delay: 1s;
+}
+
+.snowflake:nth-child(5) {
+    animation-duration: 18s;
+    animation-delay: 3s;
+}
+
+.snowflake:nth-child(6) {
+    animation-duration: 15s;
+    animation-delay: 5s;
+}
